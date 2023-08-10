@@ -3,15 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Test.TestCase2">
+      <class name="Test.TestCase1">
         <methods>
-          <include name="automationexercise"/>
-          <include name="scenario_2"/>
           <include name="getDriver"/>
           <include name="reportTeardown"/>
           <include name="reportSetup"/>
+          <include name="scenario_1"/>
         </methods>
-      </class> <!-- Test.TestCase2 -->
+      </class> <!-- Test.TestCase1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

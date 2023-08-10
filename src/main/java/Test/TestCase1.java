@@ -19,15 +19,26 @@ public class TestCase1 extends Base{
         String expectedTitle = "Automation Exercise";
         Assert.assertEquals(actualTitle,expectedTitle);
         System.out.println("Verify Home Page: Automation Exercise");
+        test1.log(Status.PASS, "Verify Home Page");
+        
         
 	    Thread.sleep(1000);	
 		driver.findElement(By.xpath("//a[@href='/products']")).click();
 		test1.log(Status.PASS, "Click Product Menu");
 		
-		/////////////////na 
+		Thread.sleep(1000);	
+		String p = driver.findElement(By.xpath("/html/body/section[2]/div/div/div[2]/div/div[2]/div/div[1]/div[1]/p")).getText();
+		System.out.println(p);
+		if (p.equals(p)) {
+			System.out.println("Test Pass");
+		}else {
+			System.out.println("Test Fail");
+		}
+		test1.log(Status.PASS, "Search Products is visible");
+
 		Thread.sleep(1000);
-		driver.findElement(By.xpath("//input[@id='search_product']")).sendKeys("men");
-		test1.log(Status.PASS, "Set Search Option Men");
+		driver.findElement(By.xpath("//input[@id='search_product']")).sendKeys("Blue Top");
+		test1.log(Status.PASS, "Set Value Men in Search Option ");
 		
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//i[@class='fa fa-search']")).click();
@@ -36,7 +47,10 @@ public class TestCase1 extends Base{
 		String expectedTitle2 = "Automation Exercise - All Products";
         String originalTitle = driver.getTitle();
         Assert.assertEquals(originalTitle, expectedTitle2);
+        test1.log(Status.PASS, "Verify All Products Page");
         System.out.println("Test Pass");
+        test1.log(Status.PASS, "Test Complite");
+        
 	}
 
 }

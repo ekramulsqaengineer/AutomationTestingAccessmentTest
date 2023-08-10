@@ -15,7 +15,7 @@ public class ExtendsReport {
 	@BeforeSuite
 	public static void reportSetup() {
 
-		htmlReporter = new ExtentHtmlReporter("automationexercise.html");
+		htmlReporter = new ExtentHtmlReporter("TestCase2.html");
 
 		// create ExtentReports and attach reporter(s)
 		extent = new ExtentReports();
